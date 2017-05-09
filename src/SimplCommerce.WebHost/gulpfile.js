@@ -1,5 +1,4 @@
-﻿/// <binding AfterBuild='copy-modules' />
-"use strict";
+﻿"use strict";
 
 var gulp = require('gulp'),
     clean = require('gulp-clean'),
@@ -9,7 +8,11 @@ var gulp = require('gulp'),
     cssmin = require("gulp-cssmin"),
     uglify = require("gulp-uglify"),
     ignore = require('gulp-ignore'),
-    del = require('del');
+    del = require('del'),
+    argv = require('yargs').argv;
+
+var configurationName = argv.configurationName || 'Debug';
+console.log(configurationName);
 
 var mPaths = {
     devModules: "../Modules/",
@@ -58,7 +61,7 @@ gulp.task('copy-modules', ['clean-module'], function () {
     modules.forEach(function (module) {
         gulp.src([mPaths.devModules + module.fullName + '/Views/**/*.*', mPaths.devModules + module.fullName + '/module.json'], { base: module.fullName })
             .pipe(gulp.dest(mPaths.hostModules + module.fullName));
-        gulp.src(mPaths.devModules + module.fullName + '/bin/Debug/netstandard1.6/**/*.*')
+        gulp.src(mPaths.devModules + module.fullName + '/bin/' + configurationName + '/netstandard1.6/**/*.*')
             .pipe(gulp.dest(mPaths.hostModules + module.fullName + '/bin'));
         gulp.src(mPaths.devModules + module.fullName + '/wwwroot/**/*.*')
             .pipe(gulp.dest(mPaths.hostWwwrootModules + module.name));

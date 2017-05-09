@@ -57,4 +57,8 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0-msbuild3-final" />
   </ItemGroup>
 
+  <Target Name="CopyModules" AfterTargets="Build">
+      <Exec Command="gulp copy-modules --configurationName $(ConfigurationName)" />
+  </Target>
+
 </Project>
