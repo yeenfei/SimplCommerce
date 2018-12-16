@@ -5,9 +5,11 @@ using SimplCommerce.Infrastructure.Models;
 
 namespace SimplCommerce.Infrastructure.Data
 {
-    public interface IRepositoryWithTypedId<T, in TId> where T : IEntityWithTypedId<TId>
+    public interface IRepositoryWithTypedId<T, in TId> : 
+        Neptrix.Data.IRepositoryV1<T>, Neptrix.Data.IDataQuery<T>
+        //where T : IEntityWithTypedId<TId>
     {
-        IQueryable<T> Query();
+        //IQueryable<T> Query();
 
         void Add(T entity);
 

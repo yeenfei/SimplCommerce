@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\EntityBaseWithTypedId.cs" />
+    <Compile Remove="Models\IEntityWithTypedId.cs" />
+    <Compile Remove="Models\ValidatableObject.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MediatR" Version="4.0.1" />
     <PackageReference Include="cloudscribe.Web.Pagination" Version="2.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.0.1" />
@@ -16,6 +22,12 @@
     <PackageReference Include="System.Globalization.Extensions" Version="4.3.0" />
     <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\neptrixlib\Neptrix.Data.EntityFramework\Neptrix.Data.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\..\neptrixlib\Neptrix.Data\Neptrix.Data.csproj" />
+    <ProjectReference Include="..\..\..\neptrixlib\Neptrix.Service\Neptrix.Service.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ using SimplCommerce.Infrastructure.Models;
 
 namespace SimplCommerce.Module.Core.Models
 {
-    public class User : IdentityUser<long>, IEntityWithTypedId<long>
+    public class User : IdentityUser<long>, Neptrix.Data.IDomainObject<long> //IEntityWithTypedId<long>
     {
         public User()
         {

@@ -8,6 +8,76 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Account\**" />
+    <Compile Remove="Views\Components\**" />
+    <Compile Remove="Views\Dashboard\**" />
+    <Compile Remove="Views\HomeAdmin\**" />
+    <Compile Remove="Views\Manage\**" />
+    <Compile Remove="Views\UserAddress\**" />
+    <EmbeddedResource Remove="Views\Account\**" />
+    <EmbeddedResource Remove="Views\Components\**" />
+    <EmbeddedResource Remove="Views\Dashboard\**" />
+    <EmbeddedResource Remove="Views\HomeAdmin\**" />
+    <EmbeddedResource Remove="Views\Manage\**" />
+    <EmbeddedResource Remove="Views\UserAddress\**" />
+    <None Remove="Views\Account\**" />
+    <None Remove="Views\Components\**" />
+    <None Remove="Views\Dashboard\**" />
+    <None Remove="Views\HomeAdmin\**" />
+    <None Remove="Views\Manage\**" />
+    <None Remove="Views\UserAddress\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Components\DefaultShippingAddressViewComponent.cs" />
+    <Compile Remove="Controllers\AccountController.cs" />
+    <Compile Remove="Controllers\AppSettingApiController.cs" />
+    <Compile Remove="Controllers\CommonApiController.cs" />
+    <Compile Remove="Controllers\CountryApiController.cs" />
+    <Compile Remove="Controllers\CustomerGroupApiController.cs" />
+    <Compile Remove="Controllers\DashboardController.cs" />
+    <Compile Remove="Controllers\DistrictApiController.cs" />
+    <Compile Remove="Controllers\EntityApiController.cs" />
+    <Compile Remove="Controllers\EntityTypeApiController.cs" />
+    <Compile Remove="Controllers\HomeAdminController.cs" />
+    <Compile Remove="Controllers\ManageController.cs" />
+    <Compile Remove="Controllers\RoleApiController.cs" />
+    <Compile Remove="Controllers\StateOrProvinceApiController.cs" />
+    <Compile Remove="Controllers\UserAddressController.cs" />
+    <Compile Remove="Controllers\UserApiController.cs" />
+    <Compile Remove="Controllers\WidgetApiController.cs" />
+    <Compile Remove="Controllers\WidgetInstanceApiController.cs" />
+    <Compile Remove="Controllers\WidgetZoneApiController.cs" />
+    <Compile Remove="ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Remove="ViewModels\Account\ForgotPasswordViewModel.cs" />
+    <Compile Remove="ViewModels\Account\LoginViewModel.cs" />
+    <Compile Remove="ViewModels\Account\RegisterViewModel.cs" />
+    <Compile Remove="ViewModels\Account\ResetPasswordViewModel.cs" />
+    <Compile Remove="ViewModels\Account\SendCodeViewModel.cs" />
+    <Compile Remove="ViewModels\Account\VerifyCodeViewModel.cs" />
+    <Compile Remove="ViewModels\BreadcrumbViewModel.cs" />
+    <Compile Remove="ViewModels\CountryForm.cs" />
+    <Compile Remove="ViewModels\CustomerGroupForm.cs" />
+    <Compile Remove="ViewModels\Manage\AddPhoneNumberViewModel.cs" />
+    <Compile Remove="ViewModels\Manage\ChangePasswordViewModel.cs" />
+    <Compile Remove="ViewModels\Manage\ConfigureTwoFactorViewModel.cs" />
+    <Compile Remove="ViewModels\Manage\DefaultAddressViewComponentVm.cs" />
+    <Compile Remove="ViewModels\Manage\FactorViewModel.cs" />
+    <Compile Remove="ViewModels\Manage\IndexViewModel.cs" />
+    <Compile Remove="ViewModels\Manage\ManageLoginsViewModel.cs" />
+    <Compile Remove="ViewModels\Manage\RemoveLoginViewModel.cs" />
+    <Compile Remove="ViewModels\Manage\SetPasswordViewModel.cs" />
+    <Compile Remove="ViewModels\Manage\UserInfoVm.cs" />
+    <Compile Remove="ViewModels\Manage\VerifyPhoneNumberViewModel.cs" />
+    <Compile Remove="ViewModels\MediaViewModel.cs" />
+    <Compile Remove="ViewModels\StateOrProvinceForm.cs" />
+    <Compile Remove="ViewModels\UserAddressFormViewModel.cs" />
+    <Compile Remove="ViewModels\UserAddressListItem.cs" />
+    <Compile Remove="ViewModels\UserForm.cs" />
+    <Compile Remove="ViewModels\WidgetFormBase.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\SimplCommerce.Infrastructure\SimplCommerce.Infrastructure.csproj" />
   </ItemGroup>
 
@@ -16,6 +86,12 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Components\" />
+    <Folder Include="ViewModels\Account\" />
+    <Folder Include="ViewModels\Manage\" />
   </ItemGroup>
 
 </Project>
